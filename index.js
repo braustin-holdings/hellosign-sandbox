@@ -25,7 +25,7 @@ const sendWithTextTags = async () => {
     signers: [
       {
         email_address: 'zylo.codes@gmail.com',
-        name: 'Alice'
+        name: 'Josh'
       },
     ],
     files: [filename],
