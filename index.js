@@ -69,7 +69,5 @@ const sendWithTemplate = async () => {
   });
 }
 
-;(() => {
-  // sendWithTemplate()
-  sendWithTextTags()
-})()
+// sendWithTemplate()
+sendWithTextTags()
