@@ -2,7 +2,7 @@
 * [x] https://www.hellosign.com/blog/getting-started-with-the-hellosign-api-using-node-js
 * [x] https://faq.hellosign.com/hc/en-us/articles/360021276192-How-to-Place-Fields-Directly-on-Documents
 * [x] https://app.hellosign.com/api/textTagsWalkthrough
-* [ ] Embedded Signing: https://app.hellosign.com/api/embeddedSigningWalkthrough
+* [x] Embedded Signing: https://app.hellosign.com/api/embeddedSigningWalkthrough
 
 ## Notes:
 Testing embedded signing on localhost:
