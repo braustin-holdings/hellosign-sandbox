@@ -6,8 +6,9 @@
     client = new HelloSign();
     console.log(`opening ${signURLs[0]}...`)
     client.open(signURLs[0], { clientId });
-    client.on('sign', (data) => {
-      alert('The signature request was signed!');
+    client.on('sign', ({ signatureId }) => {
+      alert(`The signature request was signed! ID: ${signatureId}`);
+      console.log(signatureId); // save to user
     });
   }
 })(HelloSign)

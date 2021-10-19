@@ -6,7 +6,7 @@
 
 ## Notes:
 Testing embedded signing on localhost:
-1) Run `npx localtunnel --port 3001` AND `npm run dev` 
+1) Run `npx localtunnel --port 3001` AND `npm run dev` in separate terminals.
 2) Add tunnel URL to App in HelloSign
 3) Visit tunnel URL to test client
 
