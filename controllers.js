@@ -30,9 +30,15 @@ module.exports = {
       files: [filename]
     }
     try {
-      let response = await hellosign.signatureRequest.createEmbedded(opts)
-      // res = await hellosign.embedded.getSignUrl(signature_request_id)
-      res.json(response)
+      let { signature_request: { signatures } } = await hellosign.signatureRequest.createEmbedded(opts)
+      const signURLs = []
+      if (signatures) {
+        for (const { signature_id } of signatures) {
+          const { embedded: { sign_url } } = await hellosign.embedded.getSignUrl(signature_id)
+          signURLs.push(sign_url)
+        }
+      }
+      res.json({ signURLs, clientId: process.env.HELLOSIGN_CLIENT_ID })
     } catch(err) {
       res.status(500).json(err)
     }
@@ -62,4 +68,9 @@ module.exports = {
       res.status(500).json(err)
     }
   },
+  handleCatchAll: async function(req, res) {
+    console.log(`${req.method} to ${req.url}`)
+    console.log(req.body)
+    res.end()
+  }
 }
